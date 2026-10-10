@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#100d24">
+<title>Our Love Quiz ❤️</title>
+<style>
+:root{--bg:#100d24;--panel:#191531;--pink:#ff4f91;--pink2:#ff8db8;--text:#fff8fc;--muted:#c8bfd8;--line:#ffffff20}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at top,#30204b 0%,#100d24 55%,#0a0917 100%);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;min-height:100vh;overflow-x:hidden}
+button,input{font:inherit}button{cursor:pointer;border:0}.wrap{width:min(100% - 32px,980px);margin:auto}.top{display:flex;justify-content:space-between;align-items:center;padding:20px 0}.brand{font-weight:800;letter-spacing:.3px;font-size:1.12rem}.brand span{color:var(--pink)}.pill{border:1px solid var(--line);border-radius:999px;background:#ffffff0a;color:var(--text);padding:9px 14px}
+.hero{position:relative;text-align:center;padding:62px 20px 48px;border:1px solid var(--line);border-radius:28px;background:linear-gradient(145deg,#ff4f911b,#6c49a21a),#17122d;overflow:hidden;box-shadow:0 22px 70px #0004}
+.hero:before,.hero:after{content:"♥";position:absolute;color:#ff4f911c;font-size:150px;pointer-events:none}.hero:before{top:-42px;left:4%}.hero:after{bottom:-76px;right:5%;font-size:190px}
+.eyebrow{color:var(--pink2);font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:.76rem}.hero h1{font-size:clamp(2.25rem,7vw,4.5rem);line-height:1.06;margin:15px auto;max-width:760px;letter-spacing:-1.8px}.gradient{background:linear-gradient(90deg,#fff,#ff9fc3 55%,#cdb8ff);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{color:var(--muted);max-width:520px;margin:16px auto 26px;line-height:1.7}.primary{background:linear-gradient(100deg,var(--pink),#ff77ac);color:white;padding:13px 23px;border-radius:999px;font-weight:800;box-shadow:0 8px 28px #ff4f9140;transition:transform .2s,filter .2s}.primary:hover{transform:translateY(-2px);filter:brightness(1.07)}.secondary{background:#ffffff0b;color:white;border:1px solid var(--line);padding:11px 17px;border-radius:999px}
+main{padding-bottom:50px}.card{margin:22px auto 0;padding:clamp(20px,4vw,34px);border:1px solid var(--line);border-radius:24px;background:linear-gradient(145deg,#201938,#141128);box-shadow:0 15px 45px #0002;max-width:720px}.hidden{display:none!important}.row{display:flex;gap:12px;align-items:center;justify-content:space-between}.muted{color:var(--muted)}.progress{height:7px;background:#ffffff16;border-radius:20px;overflow:hidden;margin:17px 0 25px}.bar{height:100%;width:0;background:linear-gradient(90deg,var(--pink),#c2a5ff);border-radius:20px;transition:width .4s}.question{font-size:clamp(1.3rem,4vw,1.8rem);line-height:1.3;margin:12px 0 8px}.sub{color:var(--muted);font-size:.95rem;margin-bottom:20px}.answers{display:grid;gap:10px}.answer{display:flex;align-items:center;gap:12px;text-align:left;width:100%;padding:14px 15px;border-radius:15px;background:#ffffff08;color:var(--text);border:1px solid var(--line);transition:.2s}.answer:hover{border-color:#ff8db888;background:#ff4f9110}.answer.selected{border-color:var(--pink);background:#ff4f9124;box-shadow:inset 0 0 0 1px var(--pink)}.dot{width:18px;height:18px;flex:0 0 18px;border:1.5px solid #b9accb;border-radius:50%;display:grid;place-items:center}.selected .dot{border-color:var(--pink)}.selected .dot:after{content:"";width:8px;height:8px;border-radius:50%;background:var(--pink)}.actions{display:flex;justify-content:space-between;gap:12px;margin-top:24px}.actions button{min-width:110px}.result{text-align:center}.heart-art{font-size:4rem;animation:beat 1.6s infinite}.score{font-size:clamp(4rem,15vw,6.2rem);font-weight:900;line-height:1;margin:12px 0;background:linear-gradient(90deg,#ff8db8,#fff,#c8adff);-webkit-background-clip:text;background-clip:text;color:transparent}.result h2{font-size:1.7rem;margin:10px 0}.result p{color:var(--muted);line-height:1.7;max-width:510px;margin:12px auto 24px}.result-buttons{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}.features{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}.feature{padding:18px;border:1px solid var(--line);border-radius:18px;background:#ffffff06}.feature strong{display:block;margin:8px 0}.feature p{font-size:.88rem;color:var(--muted);line-height:1.5;margin:0}.foot{text-align:center;color:#a69ab8;font-size:.82rem;padding:30px 0 20px}.heart{position:fixed;bottom:-30px;z-index:0;pointer-events:none;animation:floatUp linear forwards;opacity:.7}.wrap,main,.top{position:relative;z-index:1}@keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}@keyframes floatUp{to{transform:translateY(-110vh) rotate(30deg);opacity:0}}.field{width:100%;padding:13px 14px;border-radius:13px;border:1px solid var(--line);background:#0d0a1d;color:white;margin:7px 0 15px}.admin-list{display:grid;gap:10px}.response{padding:14px;border:1px solid var(--line);border-radius:14px;background:#ffffff06}.response summary{cursor:pointer;font-weight:700}.response p{color:var(--muted);font-size:.9rem;line-height:1.55}.small{font-size:.8rem;color:var(--muted)}@media(max-width:650px){.features{grid-template-columns:1fr}.hero{padding:48px 17px 38px}.top{padding:14px 0}.card{border-radius:20px}.actions button{min-width:0;flex:1}.row{align-items:flex-start}.feature{padding:15px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand">♡ Our <span>Love Quiz</span></div>
+    <button class="pill" id="adminOpen" type="button">Admin ♡</button>
+  </header>
+  <main>
+    <section class="hero" id="home">
+      <div class="eyebrow">A little quiz, a lot of love</div>
+      <h1>How Much Do You <span class="gradient">Really Love Me?</span> ♡</h1>
+      <p>A little collection of questions just for you. Be honest, follow your heart, and let’s celebrate the story we’re creating together.</p>
+      <button class="primary" id="startBtn">Start Our Quiz&nbsp; →</button>
+      <div class="small" style="margin-top:15px">Made with love, especially for you ✨</div>
+    </section>
+
+    <section class="card hidden" id="quizCard" aria-live="polite">
+      <div class="row"><span class="eyebrow">Our little journey</span><span class="small" id="counter">Question 1 of 10</span></div>
+      <div class="progress"><div class="bar" id="progressBar"></div></div>
+      <h2 class="question" id="questionText"></h2>
+      <p class="sub">Choose the answer that feels most true to you. There are no wrong answers. 💗</p>
+      <div class="answers" id="answers"></div>
+      <div class="actions"><button class="secondary" id="backBtn">← Back</button><button class="primary" id="nextBtn">Next →</button></div>
+    </section>
+
+    <section class="card hidden result" id="resultCard">
+      <div class="heart-art">💗</div>
+      <div class="eyebrow">Your love quiz result</div>
+      <div class="score" id="score">100%</div>
+      <h2 id="resultTitle">A beautiful connection ♡</h2>
+      <p id="resultText"></p>
+      <div class="result-buttons"><button class="primary" id="shareBtn">Share My Result ↗</button><button class="secondary" id="againBtn">Take Again</button><button class="secondary" id="homeBtn">Home</button></div>
+      <p class="small">This score reflects your answers in this playful quiz—not a measurement of real love. ❤️</p>
+    </section>
+
+    <section class="card hidden" id="adminCard">
+      <div class="row"><div><div class="eyebrow">Private view on this device</div><h2 style="margin:8px 0">Quiz Responses</h2></div><button class="secondary" id="adminClose">Close</button></div>
+      <p class="muted">Responses saved by this browser are shown here. A static website cannot send answers from other people's phones to you automatically.</p>
+      <div id="adminContent" class="admin-list"></div>
+      <div class="actions"><button class="secondary" id="exportBtn">Export JSON</button><button class="secondary" id="clearBtn">Clear saved responses</button></div>
+      <p class="small">For responses from your girlfriend's device, connect a free backend such as Firebase/Supabase or a Google Apps Script endpoint before publishing.</p>
+    </section>
+
+    <section class="features" id="features">
+      <div class="feature"><div>💌</div><strong>Thoughtful questions</strong><p>Questions about memories, support, commitment, and your future.</p></div>
+      <div class="feature"><div>✨</div><strong>A sweet result</strong><p>A playful result page with a score and a message to share.</p></div>
+      <div class="feature"><div>📱</div><strong>Phone-friendly</strong><p>Responsive design, soft animations, and no paid libraries.</p></div>
+    </section>
+  </main>
+  <footer class="foot">Made with ♡ · A little reminder to choose each other with care.</footer>
+</div>
+<script>
+const questions = [
+ {q:"What makes our relationship special to you?",a:["The way we understand each other","The laughs and little moments","How we support each other","All the little things that make us us"]},
+ {q:"When life gets difficult, what matters most to you?",a:["Talking honestly and listening","Giving each other patience","Working through it as a team","Remembering why we chose each other"]},
+ {q:"What would you most like us to build together?",a:["A future full of shared memories","Trust that grows stronger","A peaceful and supportive partnership","All of these, one step at a time"]},
+ {q:"If we disagree, what would you want us to do?",a:["Take a breath and talk calmly","Listen to each other's side","Apologize when we are wrong","Find a fair solution together"]},
+ {q:"What is one thing you hope I always feel from you?",a:["That I am cared for","That I can be myself","That I can trust you","That we are a team"]},
+ {q:"If distance or busy schedules made things hard, what would help?",a:["Honest updates and communication","Making time when we can","Patience and reassurance","A shared plan for the future"]},
+ {q:"What kind of sacrifice feels healthy in a relationship?",a:["Making time for each other","Compromising while keeping boundaries","Supporting each other's goals","Both people making fair compromises"]},
+ {q:"When I have a tough day, how would you like to support me?",a:["Listen without judging","Encourage me gently","Ask what kind of help I need","Remind me I don't have to face it alone"]},
+ {q:"What promise feels most meaningful to you?",a:["To be honest, even when it's hard","To respect each other's boundaries","To keep trying and communicating","To grow together, not control each other"]},
+ {q:"What do you hope our future feels like?",a:["Safe and peaceful","Full of laughter and adventures","Supportive of both our dreams","Like a home we build together"]}
+];
+let current=0, chosen=Array(questions.length).fill(null), name="";
+const $=id=>document.getElementById(id);
+function showOnly(id){["home","quizCard","resultCard","adminCard"].forEach(x=>$(x).classList.toggle("hidden",x!==id));$("features").classList.toggle("hidden",id==="quizCard"||id==="adminCard");window.scrollTo({top:0,behavior:"smooth"})}
+function renderQuestion(){
+ const item=questions[current];$("counter").textContent=`Question ${current+1} of ${questions.length}`;$("progressBar").style.width=`${(current+1)/questions.length*100}%`;$("questionText").textContent=item.q;$("answers").innerHTML="";
+ item.a.forEach((answer,i)=>{const b=document.createElement("button");b.className="answer"+(chosen[current]===i?" selected":"");b.type="button";b.innerHTML=`<span class="dot"></span><span></span>`;b.lastElementChild.textContent=answer;b.addEventListener("click",()=>{chosen[current]=i;renderQuestion()});$("answers").appendChild(b)});
+ $("backBtn").style.visibility=current===0?"hidden":"visible";$("nextBtn").textContent=current===questions.length-1?"See My Result ♡":"Next →";
+}
+function start(){current=0;chosen=Array(questions.length).fill(null);showOnly("quizCard");renderQuestion()}
+$("startBtn").onclick=start;$("backBtn").onclick=()=>{if(current>0){current--;renderQuestion()}};$("nextBtn").onclick=()=>{if(chosen[current]===null){alert("Choose the answer that feels right to you 💗");return}if(current<questions.length-1){current++;renderQuestion()}else finish()};
+function finish(){
+ const score=Math.round(chosen.filter(x=>x!==null).length/questions.length*100);
+ const response={name:name||"My love",date:new Date().toISOString(),score,answers:questions.map((q,i)=>({question:q.q,answer:q.a[chosen[i]]}))};
+ const all=JSON.parse(localStorage.getItem("ourLoveQuizResponses")||"[]");all.push(response);localStorage.setItem("ourLoveQuizResponses",JSON.stringify(all));
+ $("score").textContent=score+"%";$("resultTitle").textContent=score>=90?"A Heart Full of Love ♡":score>=70?"A Lovely Connection ♡":"A Story Still Growing ♡";
+ $("resultText").textContent=`Thank you for sharing what is in your heart. Your answers show what matters to you in a relationship: care, trust, communication, and building a future with mutual respect. Keep choosing kindness and honesty together. 💗`;
+ showOnly("resultCard");burstHearts();
+}
+$("againBtn").onclick=start;$("homeBtn").onclick=()=>showOnly("home");
+$("shareBtn").onclick=async()=>{const text=`My Our Love Quiz result is ${$("score").textContent} 💗\n${$("resultTitle").textContent}\nMade with love ♡`;try{if(navigator.share)await navigator.share({title:"Our Love Quiz",text});else if(navigator.clipboard){await navigator.clipboard.writeText(text);alert("Result copied! You can paste it into your chat 💗")}else alert(text)}catch(e){}};
+$("adminOpen").onclick=()=>{const pin=prompt("Enter your private admin PIN (default: 2468)");if(pin!=="2468"){if(pin!==null)alert("That PIN isn't correct.");return}renderAdmin();showOnly("adminCard")};$("adminClose").onclick=()=>showOnly("home");
+function renderAdmin(){const all=JSON.parse(localStorage.getItem("ourLoveQuizResponses")||"[]");const host=$("adminContent");host.innerHTML="";if(!all.length){host.textContent="No responses saved in this browser yet.";return}all.slice().reverse().forEach(r=>{const d=document.createElement("details");d.className="response";const s=document.createElement("summary");s.textContent=`${r.name} · ${r.score}% · ${new Date(r.date).toLocaleString()}`;d.appendChild(s);r.answers.forEach(a=>{const p=document.createElement("p");p.textContent=a.question+" — "+a.answer;d.appendChild(p)});host.appendChild(d)})}
+$("exportBtn").onclick=()=>{const data=localStorage.getItem("ourLoveQuizResponses")||"[]";const blob=new Blob([data],{type:"application/json"});const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="love-quiz-responses.json";a.click();URL.revokeObjectURL(a.href)};
+$("clearBtn").onclick=()=>{if(confirm("Delete all responses saved in this browser?")){localStorage.removeItem("ourLoveQuizResponses");renderAdmin()}};
+function burstHearts(){for(let i=0;i<18;i++){const h=document.createElement("span");h.className="heart";h.textContent=["♡","♥","💗","✦"][Math.floor(Math.random()*4)];h.style.left=Math.random()*100+"vw";h.style.animationDuration=(3+Math.random()*3)+"s";h.style.fontSize=(14+Math.random()*22)+"px";document.body.appendChild(h);setTimeout(()=>h.remove(),6500)}}
+</script>
+</body>
+</html>
